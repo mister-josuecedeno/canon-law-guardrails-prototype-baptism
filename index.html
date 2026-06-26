@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canon-Law Guardrails Prototype</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="appShell">
+      <header class="topBar">
+        <div>
+          <h1>Baptismal Certificate Guardrails</h1>
+          <p>Draft previews stay visible while final certificate generation is centrally blocked when canon-law guardrails fail.</p>
+        </div>
+        <label>Scenario<select id="scenarioSelect"><option value="blocked">Blocked sample</option><option value="valid">Valid sample</option></select></label>
+      </header>
+      <section class="workspace">
+        <aside class="editorPane"><h2>Participant fields</h2><form id="recordForm"></form></aside>
+        <section class="reviewPane">
+          <div class="actions"><button id="finalButton" type="button">Generate Final Certificate</button><p id="finalStatus" class="status"></p></div>
+          <div id="messagePanel" class="messages"></div>
+          <article id="previewPanel" class="certificatePreview"></article>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
