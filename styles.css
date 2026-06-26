@@ -1,0 +1,36 @@
+:root { color-scheme: light; font-family: Inter, "Segoe UI", Arial, sans-serif; color: #1d252f; background: #f5f7f8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.appShell { min-height: 100vh; }
+.topBar { align-items: center; background: #ffffff; border-bottom: 1px solid #d9e0e4; display: flex; gap: 24px; justify-content: space-between; padding: 20px 28px; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: 28px; margin-bottom: 6px; }
+.topBar p { color: #52616d; margin-bottom: 0; max-width: 780px; }
+.workspace { display: grid; grid-template-columns: minmax(320px, 420px) 1fr; gap: 20px; padding: 20px; }
+.editorPane, .reviewPane { min-width: 0; }
+fieldset, .messageGroup, .certificatePreview, .actions { background: #ffffff; border: 1px solid #d9e0e4; border-radius: 8px; }
+fieldset { display: grid; gap: 10px; margin: 0 0 14px; padding: 14px; }
+legend { font-weight: 700; padding: 0 6px; }
+label { color: #344450; display: grid; gap: 5px; font-size: 14px; }
+label:has(input[type="checkbox"]) { align-items: center; display: flex; }
+select, button { border: 1px solid #b9c4ca; border-radius: 6px; font: inherit; min-height: 36px; padding: 6px 10px; }
+button { background: #214e75; border-color: #214e75; color: #ffffff; cursor: pointer; font-weight: 700; }
+button:disabled { background: #9aa8b1; border-color: #9aa8b1; cursor: not-allowed; }
+.actions { align-items: center; display: flex; gap: 14px; justify-content: space-between; margin-bottom: 16px; padding: 14px; }
+.status { margin: 0; }
+.success { color: #17683b; }
+.danger { color: #8e1f2f; }
+.warning { color: #865900; }
+.info { color: #28516c; }
+.messages { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 16px; }
+.messageGroup { padding: 14px; }
+.messageGroup h2 { font-size: 18px; }
+.messageGroup ul { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.messageGroup li { display: grid; gap: 4px; }
+.fieldLinks a { color: #214e75; font-weight: 700; }
+.empty { color: #6a7780; margin-bottom: 0; }
+.certificatePreview { padding: 22px; }
+.draftBadge { background: #fff1c9; border: 1px solid #e0b64b; border-radius: 6px; color: #6f4a00; display: inline-block; font-weight: 700; margin-bottom: 12px; padding: 5px 8px; }
+.certificatePreview h2 { border-bottom: 1px solid #d9e0e4; padding-bottom: 10px; }
+.certificatePreview section { margin-top: 18px; }
+@media (max-width: 980px) { .topBar, .actions { align-items: stretch; flex-direction: column; } .workspace, .messages { grid-template-columns: 1fr; } }
